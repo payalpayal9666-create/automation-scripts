@@ -5,9 +5,6 @@ test("add to cart", async ({ page }) => {
   await page.locator('a[href="/products"]').click();
   await page.locator(".product-image-wrapper").first().hover();
   await page.locator(".product-overlay .add-to-cart").first().click();
-  // await page.locator('a[href="/products"]').first().click();
-  // await firstProduct.hover();
-  // await page.getByText("Add to cart").first().click();
   await page
     .locator(".modal-body a[href='/view_cart']")
     .waitFor({ state: "visible" });
